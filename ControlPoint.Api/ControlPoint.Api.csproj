@@ -219,6 +219,7 @@
     <Compile Include="HttpPipeline\ApiFilterExceptionAttribute.cs" />
     <Compile Include="HttpPipeline\InternalUseOnlyAttribute.cs" />
     <Compile Include="HttpPipeline\OAuth2AccessTokenHandler.cs" />
+    <Compile Include="HttpPipeline\TextFormatter.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\OAuthTokenRequest.cs" />
