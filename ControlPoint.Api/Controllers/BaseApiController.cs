@@ -12,7 +12,7 @@ namespace ControlPoint.Api.Controllers
     {
 		internal static readonly string REQ_PROP_CLIENT_APP_NAME = "BaseApiCbntroller.AppName";
 		internal static readonly string REQ_PROP_USER_ID = "BaseApiCbntroller.UserID";
-
+		
 		protected long ValidateUser()
 		{
 			long userId = 0;

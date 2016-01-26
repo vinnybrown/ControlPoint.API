@@ -110,14 +110,21 @@ namespace ControlPoint.Api.Tests
 
 		public virtual OAuthTokenResponse AcquireAuthToken(string username, string password, string scope = null, string grantType = null)
 		{
-			OAuthTokenResponse resp = ExecuteRequest<OAuthTokenResponse>(HttpMethod.Post, "/oauth2/token",
-																		 new Dictionary<string, string>
-																			 {
-																				 {"username", username},
-																				 {"password", password},
-																				 {"grant_type", grantType},
-																				 {"scope", scope},
-																			 });
+			//OAuthTokenResponse resp = ExecuteRequest<OAuthTokenResponse>(HttpMethod.Post, "/authentication",
+			//															 new Dictionary<string, string>
+			//																 {
+			//																	 {"username", username},
+			//																	 {"password", password},
+			//																	 {"grant_type", grantType},
+			//																	 {"scope", scope},
+			//																 });
+			OAuthTokenResponse resp = ExecuteRequest<OAuthTokenResponse>(HttpMethod.Post, "/authentication",
+																		 null, 
+																		 new LoginParams
+																		 {
+																			 UserName = username,
+																			 Password = password
+																		 });
 			_accessToken = resp.access_token;
 			_refreshToken = resp.refresh_token;
 			return resp;
@@ -188,7 +195,8 @@ namespace ControlPoint.Api.Tests
 				}
 				else
 				{
-					payloadContent = new StringContent(SimpleJson.SerializeObject(payloadEntity), new UTF8Encoding(), "application/json");
+					//payloadContent = new StringContent(SimpleJson.SerializeObject(payloadEntity), new UTF8Encoding(), "application/json");
+					payloadContent = new JsonContent(payloadEntity);
 				}
 			}
 
@@ -271,9 +279,13 @@ namespace ControlPoint.Api.Tests
 			{
 				error = response.Content.ReadAsAsync<ErrorException>().Result;
 			}
-			catch (Exception)
+			catch (Exception ex)
 			{
-				error = null;
+				error = new ErrorException
+				{
+					Message = ex.Message,
+					StackTrace = ex.StackTrace
+				};
 			}
 			throw new ApiException(response.StatusCode, (error == null) ? null : error.Message);
 		}

@@ -196,7 +196,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApiException.cs" />
-    <Compile Include="App_Start\AttributeRoutingConfig.cs" />
     <Compile Include="App_Start\AttributeRoutingHttpConfig.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
@@ -233,6 +232,7 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AuthenticationController.cs" />
     <Compile Include="Controllers\BaseApiController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
@@ -248,6 +248,8 @@
     <Compile Include="HttpPipeline\TextFormatter.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\JsonContent.cs" />
+    <Compile Include="Models\LoginParams.cs" />
     <Compile Include="Models\OAuthTokenRequest.cs" />
     <Compile Include="Models\ErrorException.cs" />
     <Compile Include="Models\ErrorMessage.cs" />
@@ -343,7 +345,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>56920</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://local.controlpointapi.com</IISUrl>
+          <IISUrl>http://local.controlpointapi.com/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

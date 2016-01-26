@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Configuration;
 using NUnit.Framework;
+using System.Web.Script.Serialization;
 
 namespace ControlPoint.Api.Tests.Controllers
 {
 	public abstract class BaseControllerTest : IDisposable
 	{
 		private ApiClient _client;
+		protected JavaScriptSerializer serializer = new JavaScriptSerializer();
 
 		protected BaseControllerTest()
 		{
