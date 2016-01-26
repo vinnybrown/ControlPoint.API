@@ -17,7 +17,7 @@
     <AssemblyName>ControlPoint.Api</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <MvcBuildViews>false</MvcBuildViews>
-    <UseIISExpress>true</UseIISExpress>
+    <UseIISExpress>false</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
@@ -248,7 +248,6 @@
     <Compile Include="HttpPipeline\TextFormatter.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\ErrorException - Copy.cs" />
     <Compile Include="Models\OAuthTokenRequest.cs" />
     <Compile Include="Models\ErrorException.cs" />
     <Compile Include="Models\ErrorMessage.cs" />
@@ -344,7 +343,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>56920</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:56920/</IISUrl>
+          <IISUrl>http://local.controlpointapi.com</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

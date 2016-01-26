@@ -8,7 +8,7 @@ using ControlPoint.Api;
 using ControlPoint.Api.Controllers;
 //using log4net;
 
-namespace Busidex.Api.HttpPipeline
+namespace ControlPoint.Api.HttpPipeline
 {
 	/// <summary>
 	/// Indicates that a controller method may be invoked only if the special X-Unity-App-Name header is present.

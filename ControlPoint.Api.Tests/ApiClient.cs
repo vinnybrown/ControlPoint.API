@@ -10,8 +10,9 @@ using System.Web.Http;
 using ControlPoint.Api.Models;
 using NUnit.Framework;
 using RestSharp;
+using ControlPoint.Api.Tests;
 
-namespace Busidex.Api.Tests
+namespace ControlPoint.Api.Tests
 {
 	/// <summary>
 	/// Creates an API client that can issue HTTP requests and read responses.

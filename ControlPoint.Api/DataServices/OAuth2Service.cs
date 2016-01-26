@@ -135,7 +135,7 @@ namespace ControlPoint.Api.DataServices
 		/// </summary>
 		private void AddMemberAuthorization(Guid token, long userId, string scope, DateTime from, DateTime to)
 		{
-			_dao.SaveUserAuth(userId, token, scope, from, to);
+			//_dao.SaveUserAuth(userId, token, scope, from, to);
 		}
 
 		/// <summary>
